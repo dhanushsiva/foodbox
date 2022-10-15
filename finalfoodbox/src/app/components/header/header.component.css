@@ -10,10 +10,10 @@
   position: relative;
   top: 40px;
   left: 25px;
-  font-family: "Georgia", serif;
-  font-style: italic;
+  font-family: 'Times New Roman', Times, serif, serif;
+  font-style: bold;
   font-size: 50px;
-  color: #ec9146;
+  color: darkslateblue;
 }
 
 .btnMain {
@@ -31,4 +31,8 @@
 
 th {
   color: #bf1e2e;
+}
+.navbar{
+  background-color: blanchedalmond;
+  
 }
