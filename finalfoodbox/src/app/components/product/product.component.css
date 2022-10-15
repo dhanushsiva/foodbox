@@ -1,0 +1,71 @@
+.card-top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background: green(255, 255, 255);
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  padding: 20px;
+  margin: 15px auto;
+}
+
+.navSec a:hover {
+  color: #bf1e2e;
+  cursor: pointer;
+}
+
+.card img {
+  width: 250px;
+  height: 200px;
+  margin-bottom: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.card img:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.form-control {
+  border-radius: 3px;
+  width: 350px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.carousel-item {
+  height: 300px;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* .addcart{
+    position: absolute;
+    bottom: 5px;
+    display: table;
+} */
+.bg {
+  /* The image used */
+  background-image: url("https://envato-shoebox-0.imgix.net/f17e/6bea-0b80-4f7e-8adc-cf14d13b517a/2019_12_04_62_B1.jpg?auto=compress&crop=edges&fit=crop&fm=jpeg&h=630&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1200&s=555ba8618e47a04efceec01b4d342155");
+
+  /* Full height */
+  height: 210vh;
+  margin: 0;
+  padding: 0;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

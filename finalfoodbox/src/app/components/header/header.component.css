@@ -1,0 +1,34 @@
+.logo {
+  position: relative;
+  top: 8px;
+  height: 110px;
+  width: 110px;
+  cursor: pointer;
+}
+
+.header-title {
+  position: relative;
+  top: 40px;
+  left: 25px;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: 50px;
+  color: #ec9146;
+}
+
+.btnMain {
+  font-size: 20px;
+}
+
+.btnMain:hover {
+  color: #bf1e2e;
+}
+
+.modal-footer button {
+  background-color: #bf1e2e;
+  color: rgb(247, 240, 240);
+}
+
+th {
+  color: #bf1e2e;
+}
