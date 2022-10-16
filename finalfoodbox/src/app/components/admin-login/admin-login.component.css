@@ -1,8 +1,8 @@
 .bg {
     /* The image used */
-    background-image: url("C:\group6\foodbox\finalfoodbox\src\assets\images\13.jpg");
+    background-image: url("/assets/images/13.jpg");
     /* Full height */
-    height: 65vh;
+    height: 85vh;
     margin: 0;
     padding: 0;
     /* Center and scale the image nicely */
