@@ -50,7 +50,7 @@
 }
 
 .form-control {
-    background: white url(/assets/images/link.png) right center no-repeat
+    background: white url("/assets/images/link.png") right center no-repeat
 }
 
 
@@ -62,7 +62,7 @@
 
 .bg {
     /* The image used */
-    background-image: url("C:\group6\foodbox\finalfoodbox\src\assets\images\8.jpg");
+    background-image: url("/assets/images/8.jpg");
     /* Full height */
     height: 210vh;
     margin: 0;
