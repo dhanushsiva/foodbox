@@ -1,46 +1,28 @@
 <div class="card-top container-fluid">
-  <div class="container d-flex">
     <div class="container d-flex">
-      <nav class="navbar navbar-expand-lg navbar-light col-md-7">
-        <div class="navSec">
-          <a (click)="getProducts()" id="allProducts" class="navbar-brand"
-            >All Products</a
+        <div class="form-group col-md-5">
+            <input type="text" class="form-control" name="searchKey" [(ngModel)]="searchKey" (ngModelChange)="Search()" placeholder="Search Product" />
+        </div>
+        <div class="container d-flex">
+            <nav class="navbar navbar-expand-lg navbar-light col-md-7">
+                <div class="navSec">
+                    <a (click)="getProducts()" id="allProducts" class="navbar-brand">All Products</a
           >
         </div>
         <div class="navSec">
           <a (click)="categoryVeg()" id="Veg" class="navbar-brand">Veg</a>
-        </div>
+                </div>
 
-        <div class="navSec">
-          <a (click)="categoryNonVeg()" id="NonVeg" class="navbar-brand"
-            >Non_veg</a
+                <div class="navSec">
+                    <a (click)="categoryNonVeg()" id="NonVeg" class="navbar-brand">Non_veg</a
           >
         </div>
-
         <div class="navSec">
-          <a (click)="categoryDessert()" class="navbar-brand">Dessert</a>
-        </div>
-        <div class="navSec">
-          <a (click)="categoryBurger()" class="navbar-brand">Burger</a>
-        </div>
-        <div class="navSec">
-          <a (click)="categoryRolls()" class="navbar-brand">Rolls</a>
-        </div>
-        <div class="navSec">
-          <a (click)="categoryMomos()" class="navbar-brand">Momos</a>
+          <a (click)="categoryDessert()" id="Desset" class="navbar-brand"
+            >Dessert</a
+          >
         </div>
       </nav>
-
-      <div class="form-group col-md-3">
-        <input
-          type="text"
-          class="form-control"
-          name="searchKey"
-          [(ngModel)]="searchKey"
-          (ngModelChange)="Search()"
-          placeholder="Search Product"
-        />
-      </div>
     </div>
   </div>
 </div>

@@ -1,25 +1,26 @@
 .bg {
-  /* The image used */
-  background-image: url("C:\Users\dhanu\Desktop\foobox\foodbox\finalfoodbox\src\assets\images\13.jpg");
-  /* Full height */
-  height: 65vh;
-  margin: 0;
-  padding: 0;
+    /* The image used */
+    background-image: url("C:\group6\foodbox\finalfoodbox\src\assets\images\13.jpg");
+    /* Full height */
+    height: 65vh;
+    margin: 0;
+    padding: 0;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+h2 {
+    color: antiquewhite;
 }
-h2{
-  color: antiquewhite;
-}
-h1{
-  font-style: bold;
-  color: aliceblue;
-}
-.fg{
 
-  color: antiquewhite;
+h1 {
+    font-style: bold;
+    color: aliceblue;
+}
+
+.fg {
+    color: antiquewhite;
 }
