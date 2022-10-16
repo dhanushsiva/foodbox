@@ -7,6 +7,9 @@ import { BehaviorSubject,Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
+  getDesserts() {
+    throw new Error('Method not implemented.');
+  }
   public login = new BehaviorSubject<any>([]);
   private baseURL = "http://localhost:8084/products";
   private adminURL= "http://localhost:8084/AdminProducts";
@@ -36,8 +39,8 @@ export class ProductService {
     return this.httpClient.get<Product[]>(`${this.baseURL}/NonVeg`);
   }
 
-  getPizza():Observable<Product[]>{
-    return this.httpClient.get<Product[]>(`${this.baseURL}/Pizza`);
+  getDessert():Observable<Product[]>{
+    return this.httpClient.get<Product[]>(`${this.baseURL}/Dessert`);
   }
 
   getBurger():Observable<Product[]>{

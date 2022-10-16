@@ -68,8 +68,8 @@ export class ProductComponent implements OnInit {
       this.products=data;
     })
   }
-  categoryPizza(){
-    this.productService.getPizza().subscribe(data=>{
+  categoryDessert(){
+    this.productService.getDessert().subscribe(data=>{
       this.products=data;
     })
   }
