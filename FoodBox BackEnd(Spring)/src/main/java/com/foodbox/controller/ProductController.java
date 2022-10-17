@@ -22,14 +22,15 @@ import com.foodbox.repository.ProductRepository;
 
 import com.foodbox.exception.ResourceNotFoundException;
 
-@CrossOrigin(origins = "http://localhost:4200",allowedHeaders = "*")
+@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 @RestController
 public class ProductController {
 
 	@Autowired
 	private ProductRepository productRepository;
-	
-	@Autowired AdminRepository adminRepository;
+
+	@Autowired
+	AdminRepository adminRepository;
 
 	@GetMapping("/products/Admin")
 	public List<Product> getAdminProducts() {
@@ -38,26 +39,26 @@ public class ProductController {
 
 	@GetMapping("/products/cust")
 	public List<Product> getAllProducts() {
-		List<Product> prodList=productRepository.findIfAvail();
-		if(prodList.isEmpty()) {
+		List<Product> prodList = productRepository.findIfAvail();
+		if (prodList.isEmpty()) {
 			List<Admin> adminList = adminRepository.findAll();
-			if(adminList.isEmpty()) {
-				adminRepository.save(new Admin("admin","password"));
+			if (adminList.isEmpty()) {
+				adminRepository.save(new Admin("admin", "password"));
 			}
-//			addProdIfEmpty(new Product(1,"Butter Chicken","Chicken infused with butter and spices","Indian",350,0,0,"yes","./assets/images/ButterChicken.png"));
-//			addProdIfEmpty(new Product(2,"Chicken Biryani","Rice Steamed with Chicken and spices","Indian",365,10,0,"yes","./assets/images/biryani.jpg"));
-//			addProdIfEmpty(new Product(3,"Steamed Mince Bun","Steamed Bun with lamb mince","Chinese",250,20,0,"yes","./assets/images/buns.jpg"));
-//			addProdIfEmpty(new Product(4,"Egg Fried Rice","Rice with Egg and Chinese sauses","Chinese",95,5,0,"yes","./assets/images/EggfriedRice.jpg"));
-//			addProdIfEmpty(new Product(2,"Paneer Pizza","Pizza topped with cotted cheese and vegies","Italian",435,0,0,"yes","./assets/images/paneerpizza.jpg"));
-//			addProdIfEmpty(new Product(2,"Red Sause Pasta","Pasta with Tomato and oregano","Italian",435,0,0,"yes","./assets/images/redPasta.jpg"));
-//			addProdIfEmpty(new Product(2,"Ravioli","Ravioli pasta filled with veg mince","Italian",200,18,0,"yes","./assets/images/ravioli.jpg"));
-//			addProdIfEmpty(new Product(2,"Elote de Corn","Corn topped with cream cheese and spice","Mexican",180,7,0,"yes","./assets/images/elote.jpg"));
-//			addProdIfEmpty(new Product(2,"Burrito","Wrapped Tortilla with Meat mince and Mayo","Mexican",350,0,0,"yes","./assets/images/Burrito.jpg"));
-			prodList=productRepository.findIfAvail();
+//            addProdIfEmpty(new Product(1,"Butter Chicken","Chicken infused with butter and spices","Indian",350,0,0,"yes","./assets/images/ButterChicken.png"));
+//            addProdIfEmpty(new Product(2,"Chicken Biryani","Rice Steamed with Chicken and spices","Indian",365,10,0,"yes","./assets/images/biryani.jpg"));
+//            addProdIfEmpty(new Product(3,"Steamed Mince Bun","Steamed Bun with lamb mince","Chinese",250,20,0,"yes","./assets/images/buns.jpg"));
+//            addProdIfEmpty(new Product(4,"Egg Fried Rice","Rice with Egg and Chinese sauses","Chinese",95,5,0,"yes","./assets/images/EggfriedRice.jpg"));
+//            addProdIfEmpty(new Product(2,"Paneer Pizza","Pizza topped with cotted cheese and vegies","Italian",435,0,0,"yes","./assets/images/paneerpizza.jpg"));
+//            addProdIfEmpty(new Product(2,"Red Sause Pasta","Pasta with Tomato and oregano","Italian",435,0,0,"yes","./assets/images/redPasta.jpg"));
+//            addProdIfEmpty(new Product(2,"Ravioli","Ravioli pasta filled with veg mince","Italian",200,18,0,"yes","./assets/images/ravioli.jpg"));
+//            addProdIfEmpty(new Product(2,"Elote de Corn","Corn topped with cream cheese and spice","Mexican",180,7,0,"yes","./assets/images/elote.jpg"));
+//            addProdIfEmpty(new Product(2,"Burrito","Wrapped Tortilla with Meat mince and Mayo","Mexican",350,0,0,"yes","./assets/images/Burrito.jpg"));
+			prodList = productRepository.findIfAvail();
 		}
 		return prodList;
 	}
-	
+
 	public void addProdIfEmpty(Product product) {
 		int min = 10000;
 		int max = 99999;
@@ -80,9 +81,9 @@ public class ProductController {
 		product.setPrice(price);
 		return productRepository.save(product);
 	}
-	
+
 	@PutMapping("/products/{id}")
-	public ResponseEntity<Product> updateProduct(@PathVariable Long id, @RequestBody Product productDetails){
+	public ResponseEntity<Product> updateProduct(@PathVariable Long id, @RequestBody Product productDetails) {
 		Product product = productRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee Not Found with " + id));
 		product.setName(productDetails.getName());
@@ -95,10 +96,10 @@ public class ProductController {
 		float temp = (product.getActualPrice()) * (product.getDiscount() / 100);
 		float price = product.getActualPrice() - temp;
 		product.setPrice(price);
-		
+
 		Product updatedProd = productRepository.save(product);
 		return ResponseEntity.ok(updatedProd);
-		
+
 	}
 
 	@DeleteMapping("/products/{id}")
@@ -133,25 +134,11 @@ public class ProductController {
 		return productRepository.getNonVeg();
 	}
 
-	@GetMapping("products/Pizza")
-	public List<Product> getPizza() {
-		return productRepository.getPizza();
+	@GetMapping("products/Dessert")
+	public List<Product> getDessert() {
+		return productRepository.getDessert();
 	}
 
-	@GetMapping("products/Burger")
-	public List<Product> getBurger() {
-		return productRepository.getBurger();
-	}
-	@GetMapping("products/Rolls")
-	public List<Product> getRolls() {
-		return productRepository.getRolls();
-	}
-	@GetMapping("products/Momos")
-	public List<Product> getMomos() {
-		return productRepository.getMomos();
-	}
-	@GetMapping("products/Juice")
-	public List<Product> getJuice() {
-		return productRepository.getjuice();
-	}
+	
+	
 }

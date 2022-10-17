@@ -34,7 +34,7 @@ export class ManagePurchaseComponent implements OnInit {
   
   adminLogout(){
     this.logService.sendId('');
-    this.router.navigate(['/admin']);
+    this.router.navigate(['/products']);
   }
 
   deletePurchase(id:any){

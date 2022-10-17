@@ -155,6 +155,6 @@ export class AdminDashboardComponent implements OnInit {
 
   adminLogout(){
     this.logService.sendId('');
-    this.router.navigate(['/admin']);
+    this.router.navigate(['/products']);
   }
 }

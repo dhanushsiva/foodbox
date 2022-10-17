@@ -17,6 +17,7 @@ import { ManageCustomersComponent } from './components/manage-customers/manage-c
 import { ManagePurchaseComponent } from './components/manage-purchase/manage-purchase.component';
 import { PaymentGatewayComponent } from './components/payment-gateway/payment-gateway.component';
 import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { OrderSummaryComponent } from './components/order-summary/order-summary.
     ManagePurchaseComponent,
     PaymentGatewayComponent,
     OrderSummaryComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

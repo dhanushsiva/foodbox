@@ -39,7 +39,7 @@ export class ManageCustomersComponent implements OnInit {
 
   adminLogout(){
     this.logService.sendId('');
-    this.router.navigate(['/admin']);
+    this.router.navigate(['/products']);
   }
 
   searchCustomer(){

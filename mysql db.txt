@@ -18,8 +18,8 @@ insert into Product values(134562,50,"yes","Veg","It is made of soya flour and o
 insert into Product values(134563,35,"yes","Veg","Crispy & roasted style",0,"./assets/images/Dosa.jpg","Dosa",35);
 insert into Product values(134564,180,"yes","Veg","It is made with soft tofu in a rich and spicy of sauce in vegetarian version.",5,"./assets/images/Kung Pao Tofu.jpg","Kung Pao Tofu",175);
 
-insert into Product values(144626,250,"yes","Desset","Icecream with vanila flavour",10,"./assets/images/Classic chocolate mousse.jfif","Classic chocolate mousse",225);
-insert into Product values(144627,200,"yes","Desset","Choclate lava cake with added sugers",0,"./assets/images/Choco Lava Cake.jfif","Choco Lava Cake",200);
+insert into Product values(144626,250,"yes","Dessert","Icecream with vanila flavour",10,"./assets/images/Classic chocolate mousse.jfif","Classic chocolate mousse",225);
+insert into Product values(144627,200,"yes","Dessert","Choclate lava cake with added sugers",0,"./assets/images/Choco Lava Cake.jfif","Choco Lava Cake",200);
 
 
 

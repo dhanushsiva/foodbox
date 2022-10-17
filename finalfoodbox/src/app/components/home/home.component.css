@@ -1,0 +1,21 @@
+.bg {
+    height: 27em;
+    background-size: cover;
+    width: auto;
+    background-image: url('/assets/images/home.png');
+    background-position: 50% 50%;
+}
+
+.header {
+    position: relative;
+    top: 8px;
+    left: 25px;
+    font-family: "Georgia", serif;
+    font-size: 38px;
+    color: darkslategray;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}

@@ -8,9 +8,10 @@ import { CartComponent } from './components/cart/cart.component';
 import { ManagePurchaseComponent } from './components/manage-purchase/manage-purchase.component';
 import { PaymentGatewayComponent } from './components/payment-gateway/payment-gateway.component';
 import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'products',pathMatch:'full'},
+  {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'products',component:ProductComponent},
   {path:'cart', component:CartComponent},
   {path:'admin', component:AdminLoginComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'manageCustomer',component:ManageCustomersComponent},
   {path:'managePurchase',component:ManagePurchaseComponent},
   {path:'paymentGateway',component:PaymentGatewayComponent},
-  {path:'orderSummary',component:OrderSummaryComponent}
+  {path:'orderSummary',component:OrderSummaryComponent},
+  {path:'home',component:HomeComponent}
 ];
 
 @NgModule({
