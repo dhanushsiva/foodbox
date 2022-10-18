@@ -210,6 +210,45 @@ class FoodboxSpringApplicationTests {
 //			purchase.setTransactionid("OFD12345");
 //			repo.save(purchase);
 //		}
+		@Test
+        void readpurchase()
+        {
+            PurchaseRepository repo = context.getBean(PurchaseRepository.class);
+           
+            Optional<Purchase> optionalpurchase = repo.findById((long) 1234567890);
+            if (optionalpurchase.isPresent()) {
+                Purchase purchase = optionalpurchase.get();
+                System.out.println(purchase);
+            }
+        }
+//        @Test
+//        void deletePurchase() {
+//            PurchaseRepository repo = context.getBean(PurchaseRepository.class);
+//           
+//            repo.deleteById((long) 1234567890);
+//        }
+//        @Test
+//        void findPurchaseById() {
+//            PurchaseRepository repo = context.getBean(PurchaseRepository.class);
+//           
+//            Optional<Purchase> purchase = repo.findById((long)1234567890);
+//            System.out.println(purchase);
+//        }
+        @Test
+        void updatePurchase() {
+            PurchaseRepository repo = context.getBean(PurchaseRepository.class);
+           
+            Optional<Purchase> optionalpurchase = repo.findById((long)1234567890);
+            Purchase purchase = null;
+            if (optionalpurchase.isPresent()) {
+                purchase = optionalpurchase.get();
+                System.out.println(purchase);
+            }
+            if (purchase != null) {
+                purchase.setQuantity(2);
+                repo.save(purchase);
+            }
+        }
 }
 
 
