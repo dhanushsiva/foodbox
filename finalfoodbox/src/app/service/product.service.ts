@@ -11,8 +11,8 @@ export class ProductService {
     throw new Error('Method not implemented.');
   }
   public login = new BehaviorSubject<any>([]);
-  private baseURL = "http://localhost:8084/products";
-  private adminURL= "http://localhost:8084/AdminProducts";
+  private baseURL = "http://localhost:8080/products";
+  private adminURL= "http://localhost:8080/AdminProducts";
   constructor(private httpClient: HttpClient) { }
   
   getLogin(){
@@ -43,20 +43,6 @@ export class ProductService {
     return this.httpClient.get<Product[]>(`${this.baseURL}/Dessert`);
   }
 
-  getBurger():Observable<Product[]>{
-    return this.httpClient.get<Product[]>(`${this.baseURL}/Burger`);
-  }
-  getRolls():Observable<Product[]>{
-    return this.httpClient.get<Product[]>(`${this.baseURL}/Rolls`);
-  }
-
-  getMomos():Observable<Product[]>{
-    return this.httpClient.get<Product[]>(`${this.baseURL}/Momos`);
-  }
-
-  getJuice():Observable<Product[]>{
-    return this.httpClient.get<Product[]>(`${this.baseURL}/Juice`);
-  }
   getFullProductList():Observable<Product[]>{
     return this.httpClient.get<Product[]>(`${this.baseURL}/Admin`);
   }

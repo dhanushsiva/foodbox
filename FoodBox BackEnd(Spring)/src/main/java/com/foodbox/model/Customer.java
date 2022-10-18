@@ -64,6 +64,11 @@ public class Customer {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+	public boolean isPresent() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 	
 	

@@ -10,7 +10,7 @@ export class CartService {
   public cartItemList:any=[]
   public productList = new BehaviorSubject<any>([]);
   public cart:Cart;
-  private baseURL = "http://localhost:8084/carts";
+  private baseURL = "http://localhost:8080/carts";
   constructor(private httpClient:HttpClient) { }
 
   addToCart(cart:any):Observable<any>{
