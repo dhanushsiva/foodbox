@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -57,6 +58,18 @@ public class CustomerController {
 	public List<Customer> searchCustomer(@PathVariable String keyword){
 		return customerRepository.searchCustomer(keyword);
 	}
+	
+	
+	@PutMapping("/customer/{email}")
+    public ResponseEntity<Customer> updateCustomer(@PathVariable String email, @RequestBody Customer coustomerDetails) {
+        Customer customer = customerRepository.findByEmail(email);
+        customer.setPassword(coustomerDetails.getPassword());
+        customer.setAddress(coustomerDetails.getAddress());
+        customer.setContact(coustomerDetails.getContact());
+        customer.setName(coustomerDetails.getName());
+        Customer updatecust = customerRepository.save(customer);
+        return ResponseEntity.ok(updatecust);
+    }
 	
 	@DeleteMapping("/customers/{email}")
 	public ResponseEntity<Map<String, Boolean>> deleteCustomer(@PathVariable String email){

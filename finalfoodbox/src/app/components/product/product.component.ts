@@ -73,26 +73,7 @@ export class ProductComponent implements OnInit {
       this.products=data;
     })
   }
-  categoryBurger(){
-    this.productService.getBurger().subscribe(data=>{
-      this.products=data;
-    })
-  }
-  categoryRolls(){
-    this.productService.getRolls().subscribe(data=>{
-      this.products=data;
-    })
-  }
-  categoryMomos(){
-    this.productService.getMomos().subscribe(data=>{
-      this.products=data;
-    })
-  }
-  categoryJuice(){
-    this.productService.getJuice().subscribe(data=>{
-      this.products=data;
-    })
-  }
+  
   showToLogin(){
     alert("Please login or Register to continue shopping")
   }
