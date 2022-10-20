@@ -1,57 +1,116 @@
 <header *ngIf="showHeader == 1">
-    <div class="navbar shadow-sm">
-        <div class="container">
-            <div class="navbar-brand align-item-center d-flex">
-                <div>
-                    <img routerLink="/products" class="logo" src="assets\images\food-shopping-logo.webp" alt="" />
-                </div>
 
-                <strong class="header-title">ONLINE FOOD DELIVERY</strong>
-            </div>
-
-            <div *ngIf="login == 0" class="text-right">
-                <!-- <button type="button" class="btn btn-primary">Primary</button> -->
-                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#loginModal" id="custLogin">
-          Login
-        </button>
-                <button class="btn btn-lg" type="button" data-toggle="modal" data-target="#registerModal" id="custRegister">
-          Register
-        </button>
-                <button class="btn btnMain" type="button" data-toggle="modal" data-target="#admin-loginmodel" id="adminLogin" routerLink="admin">
-          Admin
-        </button>
-            </div>
-            <div *ngIf="login == 1" class="text-right">
-                <button class="btn btnMain" (click)="getActiveOrders()" type="button" data-toggle="modal" data-target="#activeOrders">
-          Previous Orders
-        </button>
-                <button class="btn btnMain" (click)="CustomerLogout()">Logout</button>
-            </div>
+  <!-- navbar -->
+  <div class="navbar shadow-sm">
+    <div class="container">
+      <div class="navbar-brand align-item-center d-flex">
+        <div>
+          <img
+            routerLink="/products"
+            class="logo"
+            src="\assets\images\Foodboxlogo.png"
+            alt=""
+          />
         </div>
 
-        <button *ngIf="login == 1" routerLink="cart" class="btn cart">
+        <strong class="header-title align-item-center text-center"
+          >Food Box</strong
+        >
+      </div>
+
+      <div *ngIf="login == 0" class="text-right">
+        <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+        <button
+          class="btn btn-lg"
+          type="button"
+          data-toggle="modal"
+          data-target="#loginModal"
+          id="custLogin"
+        >
+          Login
+        </button>
+        <button
+          class="btn btn-lg"
+          type="button"
+          data-toggle="modal"
+          data-target="#registerModal"
+          id="custRegister"
+        >
+          Sign up
+        </button>
+        <button
+          class="btn btnMain"
+          type="button"
+          data-toggle="modal"
+          data-target="#admin-loginmodel"
+          id="adminLogin"
+          routerLink="admin"
+        >
+          Admin
+        </button>
+      </div>
+      <div *ngIf="login == 1" class="text-right">
+        <button
+          class="btn btnMain"
+          (click)="getActiveOrders()"
+          type="button"
+          data-toggle="modal"
+          data-target="#activeOrders"
+        >
+          Previous Orders
+        </button>
+        <button class="btn btnMain" (click)="CustomerLogout()">Logout</button>
+      </div>
+    </div>
+
+    <button *ngIf="login == 1" routerLink="cart" class="btn cart">
       <i
         style="font-size: 50px; color: #e49953"
         class="fas fa-shopping-bag"
       ></i>
     </button>
-    </div>
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
-                    <button type="button" class="close" id="Lcancel" data-dismiss="modal" aria-label="Close">
+  </div>
+
+  <!-- login in -->
+  <div
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="myModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+          <button
+            type="button"
+            class="close"
+            id="Lcancel"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
             <span aria-hidden="true">&times;</span>
           </button>
-                </div>
-                <p *ngIf="message != ''">{{ message }}</p>
-                <form (ngSubmit)="loginSubmit()">
-                    <div class="modal-body mx-3">
-                        <div class="md-form mb-3">
-                            <i class="fas fa-envelope prefix grey-text"></i>
-                            <input [(ngModel)]="loginData.email" name="email" type="email" id="defaultForm-email" class="form-control validate" />
-                            <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label
+        </div>
+        <p *ngIf="message != ''">{{ message }}</p>
+        <form (ngSubmit)="loginSubmit()">
+          <div class="modal-body mx-3">
+            <div class="md-form mb-3">
+              <i class="fas fa-envelope prefix grey-text"></i>
+              <input
+                [(ngModel)]="loginData.email"
+                name="email"
+                type="email"
+                id="defaultForm-email"
+                class="form-control validate"
+              />
+              <label
+                data-error="wrong"
+                data-success="right"
+                for="defaultForm-email"
+                >Your email</label
               >
             </div>
 
@@ -83,6 +142,7 @@
     </div>
   </div>
 
+  <!-- sign up -->
   <div
     class="modal fade"
     id="registerModal"
@@ -157,12 +217,14 @@
         </form>
         <div class="modal-footer d-flex justify-content-center">
           <button class="btn btn-deep-orange" (click)="addCustomer()">
-            Register
+            Sign up
           </button>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Previous Orders -->
   <div class="modal" id="activeOrders">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">

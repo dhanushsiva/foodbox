@@ -1,6 +1,6 @@
 .logo {
     position: relative;
-    top: 10px;
+    top:2px;
     height: 80px;
     width: 105px;
     cursor: pointer;
@@ -8,14 +8,23 @@
 
 .header-title {
     position: relative;
-    top: 8px;
-    left: 25px;
-    font-family: "Georgia", serif;
-    font-size: 38px;
-    color: darkslateblue;
-    ;
+    top: 20px;
+    left: 300px;
+    font-family:
+     'Brush Script MT', cursive;
+    /* 'Times New Roman', Times, serif, serif; */
+    /* 'Montserrat', cursive; */
+    /* font-style: italic; */
+    font-size: 75px;
+    color:  #101820FF;
+    text-align:justify;
 }
-
+nav {
+    background-color: #F2AA4CFF;
+}
+button{
+    color:#101820FF;
+}
 .btnHead {
     margin-left: 10px;
 }

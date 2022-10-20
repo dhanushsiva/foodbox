@@ -1,19 +1,27 @@
 .logo {
     position: relative;
-    top: 8px;
-    height: 110px;
+    top: 3px;
+    height: 100px;
     width: 110px;
     cursor: pointer;
 }
 
 .header-title {
     position: relative;
-    top: 40px;
-    left: 25px;
-    font-family: 'Times New Roman', Times, serif, serif;
-    font-style: bold;
-    font-size: 50px;
-    color: darkslateblue;
+    top: 45px;
+    left: 300px;
+    font-family:
+     'Brush Script MT', cursive;
+    /* 'Times New Roman', Times, serif, serif; */
+    /* 'Montserrat', cursive; */
+    /* font-style: italic; */
+    font-size: 75px;
+    color:  #101820FF;
+    text-align:justify;
+}
+
+button{
+    color:#101820FF;
 }
 
 .btnMain {
@@ -36,5 +44,5 @@ th {
 }
 
 .navbar {
-    background-color: blanchedalmond;
+    background-color: #F2AA4CFF;
 }

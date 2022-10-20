@@ -33,7 +33,7 @@ h6 {
     flex-direction: column;
     min-width: none;
     word-wrap: break-word;
-    background-color: rgb(177, 116, 116);
+    background-color: rgb(254, 254, 254);
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
@@ -64,7 +64,7 @@ h6 {
 
 .bg {
     /* The image used */
-    background-image: url("https://cdn.w600.comps.canstockphoto.com/seamless-food-background-vector-clipart_csp18642906.jpg");
+    background-image: url("/assets/images/12.jpg");
     /* Full height */
     height: 70vh;
     margin: 0;
